@@ -1,10 +1,23 @@
-import './App.css'
+import HomePage from './scenes/HomePage'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { useEffect, useState } from 'react'
+
+const queryClient = new QueryClient()
+
+
 
 function App() {
+ 
+
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+   <>
+   <QueryClientProvider client={queryClient}>
+      <HomePage/>
+   </QueryClientProvider>
+   </>
   )
 }
 
