@@ -1,8 +1,8 @@
-# React + TypeScript + Vite music-search-spotify-api
+# React + TypeScript + Vite 
 
-# Project Title
+# Simple Search App
 
-A brief description of what the project does.
+This application allows you to find music and images based on the user search query using Spotify Web API and Unsplash API
 
 ## Installation
 
