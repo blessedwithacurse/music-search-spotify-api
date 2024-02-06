@@ -3,7 +3,7 @@ import Select from 'react-select';
 import Card from './Card';
 import { OptionType } from '../types/optionTypes';
 import { ImageType } from '../types/imageTypes';
-
+import { ArtistType } from '../types/artistTypes';
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, UNSPLASH_ACCESS_KEY } from '../constants/constants';
 
 const SearchBar = () => {
@@ -11,7 +11,7 @@ const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [photos, setPhotos] = useState<ImageType[]>([]);
   const [audioPreviewUrl, setAudioPreviewUrl] = useState('');
-  const [previewTrackName, setPreviewTrackName] = useState([]);
+  const [previewTrackName, setPreviewTrackName] = useState('');
   const [artistName, setArtistName] = useState('');
   const [audioKey, setAudioKey] = useState(0); 
 
@@ -95,11 +95,13 @@ const SearchBar = () => {
   
   const handleSelectSong = (selectedOption: any) => {
     const selectedSong = searchResults.find(song => song.name === selectedOption.value);
+    console.log(typeof(selectedSong))
     if (selectedSong) {
       setPreviewTrackName(selectedSong.name);
-      setArtistName(selectedSong?.artists?.[0]?.name || ''); 
+      let mappedArtistName = selectedSong.artists.map((artist: ArtistType) => artist.name)
+      setArtistName(mappedArtistName.toString()); 
       setAudioPreviewUrl(selectedSong.preview_url);
-
+      console.log(selectedSong)
       // Increment the key to force audio element to remount
       setAudioKey(prevKey => prevKey + 1);
     }
