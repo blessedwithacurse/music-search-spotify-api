@@ -105,7 +105,7 @@ const SearchBar = () => {
 
   return (
     <div className="px-10">
-      <div class="w-6/12">
+      <div className="w-6/12">
         <Select
           options={mappedTrackOptions}
           isSearchable
@@ -119,10 +119,10 @@ const SearchBar = () => {
         />
       </div>
     
-      <div class="flex justify-between">
+      <div className="flex justify-between">
         <div>
-          <h1 class='py-5 text-cyan-900 italic'>Images based on search results:</h1>
-          <div class="grid grid-rows-5 grid-flow-col gap-4">
+          <h1 className='py-5 text-cyan-900 italic'>Images based on search results:</h1>
+          <div className="grid grid-rows-5 grid-flow-col gap-4">
             {photos.map((photo) => (
               <Card
                 title={photo.alt_description}
@@ -134,15 +134,15 @@ const SearchBar = () => {
         </div>
         
         {audioPreviewUrl ? (
-          <div class="w-1/4">
-            <h1 class='py-5 text-cyan-900 italic'>Audio preview based on search results:</h1>
-            <label class="ml-5 text-blue-900 font-semibold">{previewTrackName + ' - ' + artistName}</label>
-            <audio class="mt-2" key={audioKey} controls>
+          <div className="w-1/4">
+            <h1 className='py-5 text-cyan-900 italic'>Audio preview based on search results:</h1>
+            <label className="ml-5 text-blue-900 font-semibold">{previewTrackName + ' - ' + artistName}</label>
+            <audio className="mt-2" key={audioKey} controls>
               <source src={audioPreviewUrl} type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
           </div>
-        ) : <span class="text-red-600">Sorry. Audio for this song is not available due to copyright restrictions.</span>}
+        ) : <span className="text-red-600">Sorry. Audio for this song is not available due to copyright restrictions.</span>}
       </div>
     </div>
   );
