@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import fontawesome from '@fortawesome/fontawesome'
-import { faMusic } from '@fortawesome/fontawesome-free-solid'
-
-fontawesome.library.add(faMusic);
+import { faMusic } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon object
 
 export default function NavBar () {
 
