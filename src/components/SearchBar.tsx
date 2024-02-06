@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Card from './Card';
 import { OptionType } from '../types/optionTypes';
+import { ImageType } from '../types/imageTypes';
+
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, UNSPLASH_ACCESS_KEY } from '../constants/constants';
 
 const SearchBar = () => {
   const [accessTokenSpotify, setAccessTokenSpotify] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState<ImageType[]>([]);
   const [audioPreviewUrl, setAudioPreviewUrl] = useState('');
   const [previewTrackName, setPreviewTrackName] = useState([]);
   const [artistName, setArtistName] = useState('');
