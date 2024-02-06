@@ -10,7 +10,7 @@ export default function NavBar () {
     <nav className="mb-5">
       <div className="px-6 py-6 flex items-center	justify-between">
         <div className="text-blue-900  flex items-center">
-          <FontAwesomeIcon icon="fa-soslid fa-music" size='5x'/>
+          <FontAwesomeIcon icon={faMusic} size='5x'/>
           <h1 className="pl-20 text-4xl font-semibold	italic"></h1>
         </div>
         <div>
