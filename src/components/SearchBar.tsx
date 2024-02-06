@@ -97,7 +97,7 @@ const SearchBar = () => {
     const selectedSong = searchResults.find(song => song.name === selectedOption.value);
     if (selectedSong) {
       setPreviewTrackName(selectedSong.name);
-      setArtistName(selectedSong?.artists[0].name);
+      setArtistName(selectedSong?.artists?.[0]?.name || ''); 
       setAudioPreviewUrl(selectedSong.preview_url);
 
       // Increment the key to force audio element to remount
