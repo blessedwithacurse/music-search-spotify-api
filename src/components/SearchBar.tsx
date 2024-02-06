@@ -93,7 +93,7 @@ const SearchBar = () => {
     value: item.name
   })) 
   
-  const handleSelectSong = (selectedOption: {label: string, value: string}) => {
+  const handleSelectSong = (selectedOption: any) => {
     const selectedSong = searchResults.find(song => song.name === selectedOption.value);
     if (selectedSong) {
       setPreviewTrackName(selectedSong.name);
