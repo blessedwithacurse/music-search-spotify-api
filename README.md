@@ -14,4 +14,15 @@ A brief description of what the project does.
 
 ```bash
 git clone https://github.com/your-username/your-project.git
+```
 
+### Step 2: Navigate to the Project Directory
+
+```bash
+cd your-project
+```
+### Step 3: Install dependencies
+
+```bash
+npm i
+```
